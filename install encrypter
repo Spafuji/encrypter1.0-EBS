@@ -1,7 +1,8 @@
 #!/bin/bash
 
->encrypter
->decrypter
+#>./encrypter
+#>./decrypter
+#exit
 
 {
         echo '#!/usr/bin/python3.4'
@@ -63,9 +64,6 @@
         echo "  if ld == 'j':"
         echo "          flres.write('@')"
         echo "          print('b') "
-        echo "  if ld == 'f':"
-        echo "          flres.write('}')"
-        echo "          print('c') "
         echo "  if ld == 'k':"
         echo "          flres.write('^')"
         echo "          print('b') "
@@ -96,9 +94,12 @@
         echo "  if ld == ' ':"
         echo "          flres.write('й')"
         echo '          print("") '    
-} > encrypter
+} > ./encrypter
 chmod +x ./encrypter
 sudo cp ./encrypter /bin
+rm ./encrypter
+
+
 {
         echo '#!/usr/bin/python3.4'
         echo 'import sys'
@@ -129,16 +130,16 @@ sudo cp ./encrypter /bin
         echo "  if ld == '(':"
         echo "          flres.write('u')"
         echo "          print('b') "
-        echo "  if ld == '_':"
+        echo "  if ld == '$':"
         echo "          flres.write('i')"
         echo "          print('c') "
-        echo "  if ld == '[':"
+        echo "  if ld == '_':"
         echo "          flres.write('o')"
         echo "          print('b') "
         echo "  if ld == ']':"
         echo "          flres.write('p')"
         echo "          print('c') "
-        echo "  if ld == '$':"
+        echo "  if ld == '[':"
         echo "          flres.write('a')"
         echo "          print('b') "
         echo "  if ld == 'м':"
@@ -159,9 +160,6 @@ sudo cp ./encrypter /bin
         echo "  if ld == '@':"
         echo "          flres.write('j')"
         echo "          print('b') "
-        echo "  if ld == '}':"
-        echo "          flres.write('f')"
-        echo "          print('c') "
         echo "  if ld == '^':"
         echo "          flres.write('k')"
         echo "          print('b') "
@@ -177,7 +175,7 @@ sudo cp ./encrypter /bin
         echo "  if ld == '#':"
         echo "          flres.write('c')"
         echo "          print('b') "
-        echo "  if ld == ';':"
+        echo "  if ld == ':':"
         echo "          flres.write('v')"
         echo "          print('c') "
         echo "  if ld == ';':"
@@ -192,7 +190,9 @@ sudo cp ./encrypter /bin
         echo "  if ld == 'й':"
         echo "          flres.write(' ')"
         echo '          print("") '    
-} > dencrypter
+} > ./dencrypter
+
 chmod +x ./dencrypter
 sudo cp ./dencrypter /bin
 rm ./dencrypter
+
